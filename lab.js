@@ -251,7 +251,7 @@ class Wizard {
   }
 }
 let wizard1 = new Wizard('Skallywagg', 102, 'incinerate')
-wizard1.castSpell()
+// wizard1.castSpell()
 
 
 //////////////////////////// PROBLEM 14 ////////////////////////////
@@ -288,13 +288,13 @@ class Phone {
     this.price = price
     this.sold = false
   }
-sell(){
-  this.sold = true
-    console.log(`${this.brand} ${this.model} has been sold`);
-}
-changePrice(newPrice){
-  this.price = newPrice
-}
+  sell(){
+    this.sold = true
+      console.log(`${this.brand} ${this.model} has been sold`);
+  }
+  changePrice(newPrice){
+    this.price = newPrice
+  }
 }
 
 /*
@@ -432,10 +432,10 @@ let myFirstVehicle = new Vehicle()
 //Code Here
 
 class Motorcycle extends Vehicle {
-  constructor(capacity, color, mileage, year, make){
+  constructor(capacity, color, mileage, make, isCool){
     super(capacity, color, mileage) 
-      this.year = year
       this.make = make
+      this.isCool = isCool
   }
 }
 
@@ -445,8 +445,8 @@ class Motorcycle extends Vehicle {
 
 //Code Here 
 
-let myFirstMotorcycle = new Motorcycle('2','black', 1200, '1992', 'harley')
-// myFirstMotorcycle.move(250)
+let myFirstMotorcycle = new Motorcycle('2','black', 1200, 'harley', true)
+myFirstMotorcycle.move(250)
 
 /*
   Call the move function on myFirstMotorcycle (don't forget the parameter)
@@ -496,7 +496,7 @@ class Boat extends Vehicle{
 
 //Code Here
 
-
+let myFirstBoat = new Boat('2', 'red', 200, 'Nimbus 3000', 'Speed boat', false)
 
 /*
   Call the checkSeaworthiness method on your new boat
@@ -504,14 +504,20 @@ class Boat extends Vehicle{
 
 //Code Here
 
+myFirstBoat.checkSeaworthiness()
+
 /*
   Now run the performMaintenance method on your boat
 */
 
 //Code Here 
 
+myFirstBoat.performMaintenance()
+
 /*
   Check the seaworthiness once more (you should be ready for the water!)
 */
 
 //Code Here
+
+myFirstBoat.checkSeaworthiness()
